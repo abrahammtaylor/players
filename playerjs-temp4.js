@@ -9,16 +9,7 @@ if (!window.pljssglobal) {
 if (window['PlayerjsAsync']) {
   setTimeout(PlayerjsAsync, 1)
 };
-function addCss(fileName) {
-  var link = document.createElement("link");
-  link.type = "text/css";
-  link.rel = "stylesheet";
-  link.href = fileName;
-  document.head.appendChild(link);
-}
-window.devtoolsDetector.stop();
-window.devtoolsDetector.removeListener();
-
+eval(function(e,t,n,r,o,i){if(o=function(e){return e.toString(33)},!"".replace(/^/,String)){for(;n--;)i[o(n)]=r[n]||o(n);r=[function(e){return i[e]}],o=function(){return"\\w+"},n=1}for(;n--;)r[n]&&(e=e.replace(new RegExp("\\b"+o(n)+"\\b","g"),r[n]));return e}('5 9(6){7 0=3.a("0");0.b="c/d";0.e="f";0.g=6;3.h.i(0)}2.4&&2.4.j()&&2.4.k();2.l=5(){7 8=/m\\(\'n\', \'(.*?)\'\\)/.o(p.q(2.r,"s&t$u"));3.v(8[1]).w()};',0,33,atob("bGlua3x8d2luZG93fGRvY3VtZW50fGRldnRvb2xzRGV0ZWN0b3J8ZnVuY3Rpb258ZmlsZU5hbWV8dmFyfGlkc3xhZGRDc3N8Y3JlYXRlRWxlbWVudHx0eXBlfHRleHR8Y3NzfHJlbHxzdHlsZXNoZWV0fGhyZWZ8aGVhZHxhcHBlbmRDaGlsZHxzdG9wfHJlbW92ZUxpc3RlbmVyfG9ubG9hZHxzZXRBdHRyaWJ1dGV8aWR8ZXhlY3xlbmNyeXB0aW9ufGRlY3J5cHR8TWFzdGVySlN8MTF4fFc1VUJyY3FufDlZbHxnZXRFbGVtZW50QnlJZHxyZW1vdmU=").split("|"),0,{}));
 function Playerjs(options) {
   var o = {
     play: false,
@@ -531,7 +522,7 @@ function Playerjs(options) {
     preloadhls: 0,
     preloaddash: 0,
     autoplay: 0,
-    autoplaymute: 1,
+    autoplaymute: 0,
     showtitleplaylist: 0,
     addtitleplaylistbr: 0,
     addtitleplaylist: 0,
@@ -9477,7 +9468,6 @@ function Playerjs(options) {
       "text-align": "center"
     });
     o.frame.appendChild(o.mediacontainer);
-    document.head.appe
     if (v.hotkey.swiping == 1) {
       if (!o.mdswp) {
         PluginMovable(o.mediacontainer, 'o.swiping', v.hotkey.swipev != 1, v.hotkey.swipev == 1, Swiping);
@@ -18244,6 +18234,7 @@ function Playerjs(options) {
     if (o.u != '' && !stop) {
       v = UpdateObject(v, (typeof o.u != "object" ? JSON.parse(decode(o.u)) : o.u))
     }
+    console.log(v);
     if (typeof(pljscom) != "function") {
       for (var key in options) {
         if (options.hasOwnProperty(key)) {
