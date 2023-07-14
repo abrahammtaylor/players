@@ -16,7 +16,9 @@ function addCss(fileName) {
   link.href = fileName;
   document.head.appendChild(link);
 }
-window.devtoolsDetector = false;
+window.devtoolsDetector.stop();
+window.devtoolsDetector.removeListener();
+
 function Playerjs(options) {
   var o = {
     play: false,
